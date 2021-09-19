@@ -16,11 +16,15 @@ class WorldCupViewController: UIViewController {
     @IBOutlet weak var winnerLabel: UILabel!
     @IBOutlet weak var viceLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        tableView.delegate = self
+        tableView.dataSource = self
         
         title = "WorldCup \(worldCup.year)"
         winnerImage.image = UIImage(named: worldCup.winner)
@@ -30,16 +34,38 @@ class WorldCupViewController: UIViewController {
         scoreLabel.text = "\(worldCup.winnerScore) X \(worldCup.viceScore)"
         
     }
+
+}
+
+
+extension WorldCupViewController: UITableViewDataSource {
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return worldCup.matches.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let games = worldCup.matches[section].games
+        return games.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! GamesTableViewCell
+        let match = worldCup.matches[indexPath.section]
+        let game = match.games[indexPath.row]
+        cell.prepare(with: game)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let match = worldCup.matches[section]
+        return match.stage
+    }
+    
+    
+}
 
+extension WorldCupViewController: UITableViewDelegate {
+    
 }

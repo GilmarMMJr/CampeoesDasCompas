@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51223D6426F7B4320085A1A2 /* GamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51223D6326F7B4320085A1A2 /* GamesTableViewCell.swift */; };
 		519B29A826F2B1AE00DDE2A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519B29A726F2B1AE00DDE2A9 /* AppDelegate.swift */; };
 		519B29AA26F2B1AE00DDE2A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519B29A926F2B1AE00DDE2A9 /* SceneDelegate.swift */; };
 		519B29AF26F2B1AE00DDE2A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 519B29AD26F2B1AE00DDE2A9 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51223D6326F7B4320085A1A2 /* GamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTableViewCell.swift; sourceTree = "<group>"; };
 		519B29A426F2B1AE00DDE2A9 /* CampeoesDaCopa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampeoesDaCopa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		519B29A726F2B1AE00DDE2A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		519B29A926F2B1AE00DDE2A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				519B29BF26F2B55500DDE2A9 /* WinnersTableViewController.swift */,
 				519B29C226F2B59E00DDE2A9 /* WorldCupViewController.swift */,
 				519B29C726F6912900DDE2A9 /* WorldCupTableViewCell.swift */,
+				51223D6326F7B4320085A1A2 /* GamesTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				519B29C026F2B55500DDE2A9 /* WinnersTableViewController.swift in Sources */,
 				519B29A826F2B1AE00DDE2A9 /* AppDelegate.swift in Sources */,
 				519B29C526F2B5EF00DDE2A9 /* WorldCup.swift in Sources */,
+				51223D6426F7B4320085A1A2 /* GamesTableViewCell.swift in Sources */,
 				519B29C826F6912900DDE2A9 /* WorldCupTableViewCell.swift in Sources */,
 				519B29C326F2B59E00DDE2A9 /* WorldCupViewController.swift in Sources */,
 				519B29AA26F2B1AE00DDE2A9 /* SceneDelegate.swift in Sources */,
